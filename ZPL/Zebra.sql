@@ -14,13 +14,13 @@ select b.seqproduto,
        -- desta em fundo preto
         '^XA^DFR:FMT1.ZPL^FS
         ^LRY
-        ^FO260,30^GB350,203,195^FS
-        ^FO265,40^A0N,100,50^FN1^FS
-        ^FO290,145^A0N,100,50^FN2^FS
+        ^FO85,30^GB350,203,195^FS
+        ^FO90,40^A0N,100,50^FN1^FS
+        ^FO115,145^A0N,100,50^FN2^FS
         ^LRN
-        ^FO245,310^A0N,40,20^FN3^FS
-        ^FT220,325^A0B,25,30^FH\^FN4^FS
-        ^FO515,310^A0N,40,20^FN5^FS
+        ^FO70,310^A0N,40,20^FN3^FS
+        ^FT45,325^A0B,25,30^FH\^FN4^FS
+        ^FO330,310^A0N,40,20^FN5^FS
         ^XZ
 
        ^XA^XFR:FMT1.ZPL^FS
@@ -45,7 +45,7 @@ select b.seqproduto,
        ||
        
        -- codigo barra
-        '^BY2,2,40^FT235,225^BEB,,Y,N^FD'
+        '^BY2,2,40^FT55,225^BEB,,Y,N^FD'
        ||
        case
           when length(c.codacesso) = 14 then
@@ -66,7 +66,7 @@ select b.seqproduto,
        || chr(10)
        ||
        -- data de validade
-        '^FT260,300^A0N,80,47^FH\^FD'
+        '^FT85,300^A0N,80,47^FH\^FD'
        || 'Validade: '
        || to_char(
           c.dtavalidade,
